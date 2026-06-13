@@ -1,0 +1,1305 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maisa Anushka | AI/ML & Full-Stack Developer</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Maisa Anushka — Software Engineer, AI Enthusiast, Web Developer, and Cloud Computing Learner. Building innovative solutions for real-world challenges."
+  >
+
+  <meta name="author" content="Maisa Anushka">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Maisa Anushka | Portfolio">
+  <meta
+    property="og:description"
+    content="Software Engineer • AI Enthusiast • Web Developer • Cloud Computing Learner"
+  >
+  <meta property="og:image" content="./profile-placeholder.svg">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maisa Anushka | Portfolio">
+  <meta
+    name="twitter:description"
+    content="Software Engineer • AI Enthusiast • Web Developer • Cloud Computing Learner"
+  >
+  <meta name="twitter:image" content="./profile-placeholder.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+  <!-- Scan Lines Overlay -->
+<div class="scan-lines" aria-hidden="true"></div>
+
+<!-- Loader -->
+<div id="loader" class="loader">
+  <div class="loader-content">
+    <div class="loader-logo">MA.</div>
+    <div class="loader-bar">
+      <div id="loaderProgress" class="loader-progress"></div>
+    </div>
+    <div class="loader-text">INITIALIZING PORTFOLIO</div>
+    <div class="loader-subtitle">Loading Maisa Anushka's profile...</div>
+  </div>
+</div>
+
+<!-- Custom Cursor -->
+<div id="cursorRing" class="cursor-ring"></div>
+<div id="cursorDot" class="cursor-dot"></div>
+
+<!-- Canvas -->
+<canvas id="ambient-canvas"></canvas>
+
+<!-- Theme Toggle -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+  <svg class="theme-icon theme-icon--moon"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+  </svg>
+
+  <svg class="theme-icon theme-icon--sun"
+       viewBox="0 0 24 24"
+       fill="none"
+       stroke="currentColor"
+       stroke-width="2"
+       stroke-linecap="round"
+       stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+</button>
+
+  <!-- Sound Toggle -->
+<button id="soundToggle" class="sound-toggle muted" aria-label="Toggle sound">
+  <svg class="sound-icon sound-icon--on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+  </svg>
+
+  <svg class="sound-icon sound-icon--off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <line x1="23" y1="9" x2="17" y2="15"></line>
+    <line x1="17" y1="9" x2="23" y2="15"></line>
+  </svg>
+</button>
+
+<!-- Back to Top -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+
+  <svg class="btt-circle" viewBox="0 0 36 36">
+    <circle class="btt-progress" cx="18" cy="18" r="16"></circle>
+  </svg>
+</button>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+
+    <a href="#" class="nav-logo">
+      MA<span class="accent">.</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#achievements" class="nav-link">Achievements</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>
+
+
+
+  <!-- Mobile Menu -->
+  <!-- Mobile Menu -->
+<div class="mobile-menu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#skills" class="mobile-link">Skills</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#education" class="mobile-link">Education</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#achievements" class="mobile-link">Achievements</a>
+  <a href="#gallery" class="mobile-link">Gallery</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+
+    <p class="hero-greeting reveal">
+      <span class="greeting-wave">👋</span> Hello, I'm
+    </p>
+
+    <h1 class="hero-name reveal">
+      <span class="glitch-text" data-text="Maisa Anushka">
+        Maisa Anushka
+      </span>
+      <span class="accent">.</span>
+    </h1>
+
+    <!-- Profile Badge -->
+    
+<div class="hero-level reveal">
+    <span class="level-num">IT Student</span>
+    <span>Software Engineer</span>
+</div>
+
+<p class="hero-role reveal">
+    <span id="typedText"></span>
+    <span class="typed-cursor">|</span>
+</p>
+
+<script>
+const roles = [
+  "AI/ML Enthusiast",
+  "Full-Stack Developer"
+];
+    
+
+</script>
+
+    <p class="hero-desc reveal">
+     Crafting scalable, real-world solutions using AI/ML, Full-Stack Development, Big Data Analytics and cloud technologies to solve practical industry problems and deliver impactful user experiences.
+    </p>
+
+
+
+
+      <!-- Social Links -->
+<div class="hero-social reveal">
+
+  <!-- GitHub -->
+  <a href="https://github.com/anushkamaisa"
+     target="_blank"
+     rel="noopener"
+     class="social-link"
+     aria-label="GitHub">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/anushkamaisa/"
+     target="_blank"
+     rel="noopener"
+     class="social-link"
+     aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </svg>
+  </a>
+
+</div>
+
+<div class="hero-cta reveal">
+  <a href="https://github.com/anushkamaisa"
+     target="_blank"
+     rel="noopener"
+     class="btn btn-primary">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+    </svg>
+    View GitHub
+  </a>
+
+  <a href="#contact" class="btn btn-outline">
+    Get In Touch
+  </a>
+</div>
+
+<!-- Hero Stats -->
+<div class="hero-stats reveal">
+
+  <a href="https://github.com/anushkamaisa"
+     target="_blank"
+     rel="noopener"
+     class="stat stat-link"
+     id="heroContributionsLink">
+
+    <span class="stat-num" id="heroContributions" data-target="0">0</span>
+    <span class="stat-label">GitHub Contributions</span>
+  </a>
+
+  <a href="https://github.com/anushkamaisa?tab=repositories"
+     target="_blank"
+     rel="noopener"
+     class="stat stat-link"
+     id="heroReposLink">
+
+    <span class="stat-num" id="heroRepos" data-target="0">0</span>
+    <span class="stat-label">Repositories</span>
+  </a>
+
+</div>
+</div>
+
+
+
+    <!-- Heroin Image -->
+<div class="hero-image reveal">
+  <div class="hero-img-wrap">
+    <div class="hero-img-glow" aria-hidden="true"></div>
+    <div class="hero-img-ring" aria-hidden="true"></div>
+    <div class="hero-img-ring hero-img-ring--2" aria-hidden="true"></div>
+    <div class="hero-img-overlay" aria-hidden="true"></div>
+    <div class="hero-img-scan" aria-hidden="true"></div>
+
+    <img
+      class="hero-img"
+      src="MaisaAnushka.jpeg"
+      data-fallback="./profile-placeholder.svg"
+      alt="Maisa Anushka profile photo"
+      loading="eager"
+    >
+  </div>
+</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section section--dark" id="about">
+  <div class="container">
+
+    <h2 class="section-title reveal cinematic-scale">
+      About <span class="accent">Me</span>
+    </h2>
+
+    <div class="about-grid">
+
+      <div class="about-text reveal cinematic-left">
+
+        
+    <p>
+  I am a passionate <strong>Information Technology student</strong>
+  at <strong>Chaitanya Bharathi Institute of Technology</strong>
+  with interests in Software Engineering, AI/ML, Full-Stack Development,
+  and Cloud Technologies.
+</p>
+
+<p>
+  I build real-world solutions using AI/ML, full-stack development, cloud technologies, IoT, and Big Data Analytics through hands-on
+  projects and hackathons, strengthening my problem-solving,
+  analytical, and system design skills.
+</p>
+
+<p>
+  I continuously enhance my technical expertise to build impactful,
+  production-ready solutions and prepare for industry-level
+  engineering roles.
+</p>
+
+        <div class="about-details">
+
+          <div class="detail">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">Maisa Anushka</span>
+          </div>
+
+          <div class="detail">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">
+              anushkamaisa020@gmail.com
+            </span>
+          </div>
+
+          <div class="detail">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">India</span>
+          </div>
+
+        </div>
+      </div>
+
+     <div class="profile-showcase">
+
+
+
+  <div class="showcase-item">
+    <div class="showcase-icon">🤖</div>
+    <h4>Artificial Intelligence</h4>
+    <p>Exploring intelligent systems & AI</p>
+  </div>
+
+  <div class="showcase-item">
+    <div class="showcase-icon">📊</div>
+    <h4>Big Data Analytics</h4>
+    <p>Analyzing data for insights and decisions</p>
+  </div>
+
+  <div class="showcase-item">
+    <div class="showcase-icon">💻</div>
+    <h4>Web Development</h4>
+    <p>Creating dynamic and responsive websites</p>
+  </div>
+
+  <div class="showcase-item">
+    <div class="showcase-icon">☁️</div>
+    <h4>Cloud Computing</h4>
+    <p>Learning modern cloud technologies</p>
+  </div>
+
+  
+
+</div>
+
+    </div>
+  </div>
+
+ <!-- ===== SKILLS ===== -->
+  <!-- ===== SKILLS ===== -->
+<section class="section" id="skills">
+  <div class="container">
+
+    <h2 class="section-title reveal">
+      Skill <span class="accent">Arsenal</span>
+    </h2>
+
+    <div class="skills-grid">
+
+      <!-- Artificial Intelligence & Machine Learning -->
+      <div class="skill-category reveal hud-card holo-tilt" style="padding:2rem">
+        <div class="skill-icon">🤖</div>
+        <h3>Artificial Intelligence & Machine Learning</h3>
+        <div class="skill-tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag">Feature Engineering</span>
+          <span class="tag">Model Building</span>
+          <span class="tag">Recommendation Systems</span>
+        </div>
+      </div>
+
+      <!-- Data Analytics -->
+      <!-- Data Analytics & Big Data -->
+<div class="skill-category reveal hud-card holo-tilt" style="padding:2rem">
+  <div class="skill-icon">📊</div>
+  <h3> Big Data Analytics</h3>
+  <div class="skill-tags">
+    <span class="tag">Data Cleaning</span>
+    <span class="tag">Data Processing</span>
+    <span class="tag">Spark MLlib</span>
+    <span class="tag">Spark SQL</span>
+    <span class="tag">Spark Structured Streaming</span>
+    <span class="tag">GraphX</span>
+    <span class="tag">Apache Kafka</span>
+  </div>
+</div>
+
+      <!-- Web Development -->
+      <div class="skill-category reveal hud-card holo-tilt" style="padding:2rem">
+        <div class="skill-icon">🌐</div>
+        <h3>Web Development</h3>
+        <div class="skill-tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">MongoDB</span>
+        </div>
+      </div>
+
+      <!-- Cloud & Tools -->
+      <div class="skill-category reveal hud-card holo-tilt" style="padding:2rem">
+        <div class="skill-icon">☁️</div>
+        <h3>Cloud & Tools</h3>
+        <div class="skill-tags">
+          <span class="tag">AWS</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+      <!-- Skill Progress -->
+<div class="progress-section reveal">
+  <h3 class="progress-heading">🚀 Skill Levels</h3>
+
+  <div class="progress-grid">
+
+    <div class="progress-item">
+      <div class="progress-info">
+        <span>Python <span class="xp-level"></span></span>
+        <span class="progress-pct">85%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="85"></div>
+      </div>
+    </div>
+
+    <div class="progress-item">
+      <div class="progress-info">
+        <span>Java <span class="xp-level"></span></span>
+        <span class="progress-pct">75%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="75"></div>
+      </div>
+    </div>
+
+    <div class="progress-item">
+      <div class="progress-info">
+        <span>AI/ML <span class="xp-level"></span></span>
+        <span class="progress-pct">86%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="86"></div>
+      </div>
+    </div>
+
+    <div class="progress-item">
+      <div class="progress-info">
+        <span>Web Development<span class="xp-level"></span></span>
+        <span class="progress-pct">75%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="75"></div>
+      </div>
+    </div>
+
+    <div class="progress-item">
+      <div class="progress-info">
+        <span>Cloud Computing <span class="xp-level"></span></span>
+        <span class="progress-pct">75%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="75"></div>
+      </div>
+    </div>
+
+    <div class="progress-item">
+      <div class="progress-info">
+        <span>Big Data Analytics<span class="xp-level"></span></span>
+        <span class="progress-pct">85%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" data-width="85"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <!-- Character Stats -->
+      <!-- Character Stats -->
+<div class="char-stats reveal">
+
+  <div class="char-stat holo-tilt">
+    <div class="char-stat-name">Python Programming</div>
+    <div class="char-stat-bar">
+      <div class="char-stat-fill str" data-width="90"></div>
+    </div>
+    <div class="char-stat-val">85</div>
+  </div>
+
+  <div class="char-stat holo-tilt">
+    <div class="char-stat-name">AI · Machine Learning</div>
+    <div class="char-stat-bar">
+      <div class="char-stat-fill int" data-width="85"></div>
+    </div>
+    <div class="char-stat-val">86</div>
+  </div>
+
+  <div class="char-stat holo-tilt">
+    <div class="char-stat-name">WEB · Development</div>
+    <div class="char-stat-bar">
+      <div class="char-stat-fill dex" data-width="75"></div>
+    </div>
+    <div class="char-stat-val">75</div>
+  </div>
+
+  <div class="char-stat holo-tilt">
+    <div class="char-stat-name">CLD · Cloud Computing</div>
+    <div class="char-stat-bar">
+      <div class="char-stat-fill wis" data-width="75"></div>
+    </div>
+    <div class="char-stat-val">75</div>
+  </div>
+
+  <div class="char-stat holo-tilt">
+    <div class="char-stat-name">BDA · Big Data Analytics</div>
+    <div class="char-stat-bar">
+      <div class="char-stat-fill cha" data-width="85"></div>
+    </div>
+    <div class="char-stat-val">85</div>
+  </div>
+
+</div>
+
+<!-- Power Level -->
+<div class="power-level reveal">
+  <span class="power-label">Innovation & Problem-Solving Mindset</span>
+
+  <div class="power-bar">
+    <div class="power-fill" data-width="88"></div>
+  </div>
+
+  <span class="power-value">8,800</span>
+</div>
+
+</div>
+</section>
+
+  <!-- ===== EXPERIENCE ===== -->
+<section class="section section--dark" id="experience">
+  <div class="container">
+
+    <h2 class="section-title reveal cinematic-scale">
+      Experience <span class="accent">& Activities</span>
+    </h2>
+
+    <div class="timeline">
+
+      <!-- Project Development -->
+      <div class="timeline-item reveal cinematic-left">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span class="timeline-date">2024 — Present</span>
+
+          <h3>AI & Full-Stack Project Development</h3>
+
+          <p class="timeline-company">
+            Academic & Personal Projects
+          </p>
+
+          <p>
+            Built real-world applications using AI/ML and Full-Stack Development,
+            focusing on scalable systems, recommendation engines, and cloud-integrated solutions.
+          </p>
+
+          <div class="timeline-tags">
+            <span>AI/ML</span>
+            <span>Full-Stack</span>
+            <span>Recommendation Systems</span>
+            <span>Cloud</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hackathons -->
+      <div class="timeline-item reveal cinematic-left">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span class="timeline-date">2024</span>
+
+          <h3>Hackathon Participation</h3>
+
+          <p class="timeline-company">
+            National & College-Level Events
+          </p>
+
+          <p>
+            Participated in hackathons to solve real-world problems through rapid prototyping,
+            teamwork, and innovative solution building under time constraints.
+          </p>
+
+          <div class="timeline-tags">
+            <span>Problem Solving</span>
+            <span>Teamwork</span>
+            <span>Innovation</span>
+            <span>Rapid Prototyping</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning -->
+      <div class="timeline-item reveal cinematic-left">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <span class="timeline-date">2023 — Present</span>
+
+          <h3>Technical Skill Development</h3>
+
+          <p class="timeline-company">
+            Continuous Learning
+          </p>
+
+          <p>
+            Strengthening skills in AI/ML concepts, Big Data Analytics,
+            and software engineering through consistent practice and project work.
+          </p>
+
+          <div class="timeline-tags">
+            <span>AI/ML</span>
+            <span>Big Data Analytics</span>
+            <span>Software Engineering</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== EDUCATION ===== -->
+  <!-- ===== EDUCATION ===== -->
+<section class="section" id="education">
+  <div class="container">
+
+    <h2 class="section-title reveal">
+      Education <span class="accent">& Learning</span>
+    </h2>
+
+    <div class="education-grid">
+
+      <!-- B.E. Degree -->
+      <div class="edu-card reveal hud-card" style="padding:2rem">
+        <div class="edu-icon">🎓</div>
+
+        <div class="edu-info">
+          <span class="edu-date">2024 — 2027</span>
+
+          <h3>B.E. in Information Technology</h3>
+
+          <p class="edu-institution">
+            Chaitanya Bharathi Institute of Technology
+          </p>
+
+          <p>
+            Studying core areas including Software Engineering, Artificial Intelligence,
+            Web Development, Cloud Computing, and Big Data Analytics.
+          </p>
+        </div>
+      </div>
+
+      <!-- Diploma -->
+      <div class="edu-card reveal hud-card" style="padding:2rem">
+        <div class="edu-icon">📘</div>
+
+        <div class="edu-info">
+          <span class="edu-date">2021 — 2024</span>
+
+          <h3>Diploma in Engineering</h3>
+
+          <p class="edu-institution">
+            Dr. B. R. Ambedkar Government Model Residential Polytechnic for Women
+          </p>
+
+          <p>
+            Built strong fundamentals in programming, and problem-solving through practical lab work and academic training.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== PROJECTS (Quest Cards) ===== -->
+  <section class="section section--dark" id="projects">
+  <div class="container">
+
+    <h2 class="section-title reveal cinematic-scale">
+      Featured <span class="accent">Projects</span>
+    </h2>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card reveal holo-tilt">
+        <span class="quest-badge"></span>
+
+        <div class="project-img-wrap">
+  <div class="project-img-placeholder">
+    <img
+      src="MetroFlow.jpeg"
+      alt="MetroFlow – AI-Powered Train Fleet Management & Real-Time Analytics Platform"
+      style="width:100%; height:250px; object-fit:contain;"
+    >
+  </div>
+</div>
+
+        <div class="project-info">
+
+          <h3>
+            MetroFlow – AI-Powered Train Fleet Management & Real-Time Analytics Platform
+          </h3>
+
+          <p>
+            Built a real-time scheduling and analytics system using FastAPI,
+            PostgreSQL, Kafka, Google OR-Tools, and Scikit-Learn for intelligent
+            train allocation, route optimization, and operational efficiency.
+          </p>
+
+          <div class="quest-xp">AI + Analytics Platform</div>
+
+          <div class="project-tags">
+            <span>FastAPI</span>
+            <span>PostgreSQL</span>
+            <span>Kafka</span>
+            <span>Google OR-Tools</span>
+            <span>Scikit-Learn</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/anushkamaisa" target="_blank" rel="noopener">
+              → Source
+            </a>
+            <a href="#" target="_blank" rel="noopener">
+              → Demo
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal holo-tilt">
+  <span class="quest-badge"></span>
+
+  <div class="project-img-wrap">
+    <div class="project-img-placeholder">
+      <img
+        src="Real_Time_Resturant_Workflow.png"
+        alt="Real-Time Restaurant Intelligence & Recommendation System"
+        class="project-image"
+      >
+    </div>
+  </div>
+
+  <div class="project-info">
+    <h3>
+      Real-Time Restaurant Intelligence &
+      Recommendation System
+    </h3>
+
+    <p>
+      Designed a recommendation system that analyzes user preferences,
+      restaurant data, ratings, and behavioral patterns to provide
+      personalized restaurant suggestions. Leveraged machine learning
+      techniques and Big Data Analytics to deliver intelligent insights and
+      enhance user decision-making.
+    </p>
+
+    <div class="project-tags">
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>Recommendation Systems</span>
+      <span>Big Data Analytics</span>
+    </div>
+  </div>
+</div>
+
+                <!-- Project 3 -->
+        <div class="project-card reveal holo-tilt">
+          <span class="quest-badge"></span>
+
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <img
+                src="Attendance_Monitoring_Workflow.png"
+                alt="Smart Attendance Monitoring Framework Architecture"
+                class="project-image"
+              >
+            </div>
+          </div>
+
+          <div class="project-info">
+            <h3>
+              A Scalable Smart Attendance Monitoring Framework Using RFID, IoT, and Cloud-Based Logging with Twilio Communication
+            </h3>
+
+            <p>
+              Developed an automated attendance monitoring solution integrating
+              RFID technology, IoT devices, cloud-based logging, and Twilio
+              communication services for real-time attendance tracking and
+              instant notifications.
+            </p>
+
+            <div class="project-tags">
+              <span>RFID</span>
+              <span>IoT</span>
+              <span>Twilio</span>
+              <span>Cloud Computing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal holo-tilt">
+
+          <span class="quest-badge"></span>
+
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+              <img
+                src="Home.png"
+                alt="HomeMaker-Finder Local Cuisine Platform"
+                class="project-image"
+              >
+            </div>
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              HomeMaker-Finder – Homemade Local Cuisine Delivery Platform
+            </h3>
+
+            <p>
+              Developed a full-stack web application using the MERN stack
+              (MongoDB, Express.js, React.js, Node.js) that connects homemakers
+              with customers seeking authentic homemade regional cuisine.
+              The platform enables user registration, secure authentication,
+              menu management, food ordering, order tracking, and homemaker
+              dashboards.
+            </p>
+
+            <div class="project-tags">
+              <span>MongoDB</span>
+              <span>Express.js</span>
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>JWT Auth</span>
+              <span>REST API</span>
+              <span>Food Ordering</span>
+              <span>Dashboard</span>
+            </div>
+
+          </div>
+
+        </div>
+
+    </div> <!-- projects-grid -->
+  </div> <!-- container -->
+</section>
+  <!-- ===== ACHIEVEMENTS ===== -->
+ <!-- ===== ACHIEVEMENTS ===== -->
+   <!-- ===== ACHIEVEMENTS ===== -->
+<section class="section section--dark" id="achievements">
+
+  <div class="container">
+
+    <h2 class="section-title reveal">
+      Achievements <span class="accent">& Recognition</span>
+    </h2>
+
+    <div class="achievements-grid">
+
+      <!-- Projects -->
+      <div class="achievement-card reveal holo-tilt">
+        <span class="achievement-badge">PROJECTS</span>
+        <div class="achievement-icon">🚀</div>
+
+        <h3>Real-World Project Development</h3>
+
+        <p>
+          Built multiple end-to-end applications in AI/ML, Web Development,
+          and IoT systems, focusing on solving real-world engineering problems
+          with scalable and practical solutions.
+        </p>
+      </div>
+
+      <!-- Innovation -->
+      <div class="achievement-card reveal holo-tilt">
+        <span class="achievement-badge">INNOVATION</span>
+        <div class="achievement-icon">💡</div>
+
+        <h3>AI-Based Solution Design</h3>
+
+        <p>
+          Developed intelligent systems such as recommendation engines and
+          data-driven applications that enhance decision-making and user experience
+          using machine learning techniques.
+        </p>
+      </div>
+
+      <!-- Collaboration -->
+      <div class="achievement-card reveal holo-tilt">
+        <span class="achievement-badge">COLLABORATION</span>
+        <div class="achievement-icon">🤝</div>
+
+        <h3>Hackathons & Team Projects</h3>
+
+        <p>
+          Actively participated in hackathons and collaborative projects,
+          working under time constraints to build rapid prototypes and innovative solutions.
+        </p>
+      </div>
+
+      <!-- Growth -->
+      <div class="achievement-card reveal holo-tilt">
+        <span class="achievement-badge">GROWTH</span>
+        <div class="achievement-icon">📚</div>
+
+        <h3>Continuous Technical Learning</h3>
+
+        <p>
+          Continuously improving skills in AI/ML, Big Data Analytics,
+          Full-Stack Development, and Cloud Computing through hands-on projects
+          and practical implementation.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>  <!-- ===== HACKATHON GALLERY ===== -->
+  <!-- ===== GALLERY ===== -->
+<!-- ===== JOURNEY / MILESTONES ===== -->
+<section class="section section--dark" id="gallery">
+  <div class="container">
+
+    <h2 class="section-title reveal">
+      Technical <span class="accent">Journey</span>
+    </h2>
+
+    <p class="gallery-subtitle reveal">
+      A visual showcase of my technical journey, highlighting key milestones in hackathon participation, project development, and certifications that have shaped my growth as a software engineer.
+    </p>
+
+    <div class="gallery-grid">
+
+      <!-- 1. Hackathon -->
+      <div class="gallery-card reveal holo-tilt">
+
+        <div class="gallery-img-wrap">
+          <img src="Hackathon.png"
+               alt="Smart India Hackathon"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+
+          <div class="gallery-img-fallback">
+            <span class="gallery-fallback-icon">🏆</span>
+            <span>Hackathon Experience</span>
+          </div>
+
+          <div class="gallery-overlay">
+            <div class="gallery-event-tag">HACKATHON</div>
+          </div>
+        </div>
+
+        <div class="gallery-info">
+          <h3>Hackathon Participation</h3>
+          <p>
+            Collaborated in competitive hackathons to build rapid prototypes and solve real-world problems under strict time constraints in a team-based environment.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Projects -->
+      <div class="gallery-card reveal holo-tilt">
+
+        <div class="gallery-img-wrap">
+          <img src="Projects.png"
+               alt="Project Portfolio"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+
+          <div class="gallery-img-fallback">
+            <span class="gallery-fallback-icon">🚀</span>
+            <span>Project Work</span>
+          </div>
+
+          <div class="gallery-overlay">
+            <div class="gallery-event-tag">PROJECTS</div>
+          </div>
+        </div>
+
+        <div class="gallery-info">
+          <h3>End-to-End Project Development</h3>
+          <p>
+            Developed scalable solutions in AI-driven systems, IoT, and full-stack development using AI/ML, Big Data Analytics, Full-Stack Engineering, and Cloud Technologies, with a focus on real-world problem solving and system efficiency.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Certifications -->
+      <div class="gallery-card reveal holo-tilt">
+
+        <div class="gallery-img-wrap">
+          <img src="certificates.png"
+               alt="Certifications"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+
+          <div class="gallery-img-fallback">
+            <span class="gallery-fallback-icon">📜</span>
+            <span>Certifications</span>
+          </div>
+
+          <div class="gallery-overlay">
+            <div class="gallery-event-tag">CERTIFICATIONS</div>
+          </div>
+        </div>
+
+        <div class="gallery-info">
+          <h3>Technical Certifications</h3>
+          <p>
+           Strengthened technical foundation through certifications in MongoDB Associate Developer, Salesforce AI Associate, Salesforce Agentforce Specialist, and Oracle Cloud Infrastructure (OCI) 2025 Foundations Associate, along with continuous learning in Software Development, AI/ML, and Cloud Technologies.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <!-- ===== ACHIEVEMENTS ===== -->
+
+  <!-- ===== GITHUB ACTIVITY ===== -->
+ <!-- ===== GITHUB ===== -->
+
+  <!-- ===== CONTACT ===== -->
+  <!-- ===== CONTACT ===== -->
+<section class="section section--dark" id="contact">
+  <div class="container">
+
+    <h2 class="section-title reveal cinematic-scale">
+      Get In <span class="accent">Touch</span>
+    </h2>
+
+    <p class="contact-subtitle reveal">
+      Open to internships, collaborations, software development roles, AI/ML projects, and tech discussions. Feel free to connect.
+    </p>
+
+    <div class="contact-layout">
+
+      <!-- ================= CONTACT FORM ================= -->
+      <form class="contact-form reveal cinematic-left"
+            id="contactForm"
+            action="https://formspree.io/f/xvznvvwy"
+            method="POST">
+
+        <div class="form-group">
+          <label for="formName">Full Name</label>
+          <input type="text"
+                 id="formName"
+                 name="name"
+                 placeholder="Enter your full name"
+                 required>
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formEmail">Email Address</label>
+          <input type="email"
+                 id="formEmail"
+                 name="email"
+                 placeholder="Enter your email address"
+                 required>
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formSubject">Subject</label>
+          <input type="text"
+                 id="formSubject"
+                 name="subject"
+                 placeholder="Internship / Collaboration / Query"
+                 required>
+          <span class="form-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="formMessage">Message</label>
+          <textarea id="formMessage"
+                    name="message"
+                    placeholder="Write your message clearly..."
+                    rows="5"
+                    required></textarea>
+          <span class="form-error"></span>
+        </div>
+
+        <!-- Honeypot anti-spam -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <button type="submit" id="formSubmit" class="btn btn-primary form-submit">
+          <span class="submit-text">Send Message</span>
+          <span class="submit-loading" style="display:none;">Sending...</span>
+          <span class="submit-success" style="display:none;">Sent ✓</span>
+        </button>
+
+      </form>
+
+      <!-- ================= CONTACT INFO CARDS ================= -->
+      <div class="contact-cards reveal cinematic-right">
+
+        <div class="contact-card hud-card">
+          <span class="contact-icon">📧</span>
+          <span class="contact-label">Email</span>
+          <a class="contact-value" href="mailto:anushkamaisa020@gmail.com">
+            anushkamaisa020@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-card hud-card">
+          <span class="contact-icon">📍</span>
+          <span class="contact-label">Location</span>
+          <span class="contact-value">India</span>
+        </div>
+
+        <div class="contact-card hud-card">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">Status</span>
+          <span class="contact-value">
+            Open to Internship & Full-Time Opportunities
+          </span>
+        </div>
+
+        <div class="contact-card hud-card">
+          <span class="contact-icon">🔗</span>
+          <span class="contact-label">LinkedIn</span>
+          <a class="contact-value"
+             href="https://linkedin.com/in/anushkamaisa"
+             target="_blank">
+            linkedin.com/in/anushkamaisa
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <div class="footer-logo">MA<span class="accent">.</span></div>
+
+      <p>
+        Building innovative solutions through Software Engineering,
+        Artificial Intelligence, Web Development, Big Data Analytics,
+        and Cloud Computing.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+
+      <a href="https://github.com/anushkamaisa" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/anushkamaisa/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z"/>
+        </svg>
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-views">
+      👁️ <span id="footerViews">0</span> profile views
+    </span>
+
+    &copy; 2026 <strong>Maisa Anushka</strong>.
+    All rights reserved. Built with passion & code.
+  </div>
+</footer>
+
+<script src="ambient.js"></script>
+<script src="main.js"></script>
+
+<!-- Firebase Profile View Counter -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  runTransaction,
+  onValue
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDDDS2Zodp4hKYl4H02lJqou2yZ3f1GIPs",
+  authDomain: "portfolio-views-fca98.firebaseapp.com",
+  databaseURL: "https://portfolio-views-fca98-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "portfolio-views-fca98",
+  storageBucket: "portfolio-views-fca98.firebasestorage.app",
+  messagingSenderId: "983267995205",
+  appId: "1:983267995205:web:03bff205d53868b2097d2c"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const viewsRef = ref(db, "profileViews");
+
+if (!localStorage.getItem("portfolio_viewed")) {
+  runTransaction(viewsRef, (count) => {
+    return (count || 0) + 1;
+  });
+
+  localStorage.setItem("portfolio_viewed", "true");
+}
+
+onValue(viewsRef, (snapshot) => {
+  document.getElementById("footerViews").textContent =
+    snapshot.val() || 0;
+});
+</script>
+
+</body>
+</html>
